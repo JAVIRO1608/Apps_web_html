@@ -1,105 +1,514 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Taules</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Taules</title>
 
-    <body>
-        <section>
-            <header>
-                <h1>Taula del 10 primers pilots F1 2006</h1>
-            </header>
-        </section>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f5f5f5;
+        }
 
-        <section>
-            <!-- inicio tabla-->
-            <table border="5">
-                <!-- cabezera de la tabla -->
-                <thead>
-                    <tr>
-                        <!-- columnas -->
-                        <th>Posició</th>
-                        <th>Pilot</th>
-                        <th>Equip</th>
-                        <th>Punts</th>
-                    </tr>
-                </thead>
+        header {
+            margin-bottom: 10px;
+        }
 
-                <!-- cuerpo tabla -->
-                <tbody>
-                    <!-- Alonso -->
-                    <tr>
-                        <td>1</td>
-                        <td>Fernando Alonso</td>
-                        <td>Renault</td>
-                        <td>134</td>
-                    </tr>
-                    <!-- MSchumacher-->
-                    <tr>
-                        <td>2</td>
-                        <td>Michael Schumacher</td>
-                        <td>Ferrari</td>
-                        <td>121</td>
-                    </tr>
-                    <!-- Massa -->
-                    <tr>
-                        <td>2</td>
-                        <td>felipe Massa</td>
-                        <td>Ferrari</td>
-                        <td>80</td>
-                    </tr>
-                    <!-- Fisichella -->
-                    <tr>
-                        <td>3</td>
-                        <td>Giancarlo Fisichella</td>
-                        <td>Renault</td>
-                        <td>72</td>
-                    </tr>
-                    <!-- Räikkönnen -->
-                    <tr>
-                        <td>5</td>
-                        <td>Kimi Räikkönen</td>
-                        <td>Mclaren-Mercedes</td></ts>
-                        <td>65</td>
-                    </tr>
-                    <!-- Button -->
-                    <tr>
-                        <td>6</td>
-                        <td>Jenson Button</td>
-                        <td>honda</td>
-                        <td>56</td>
-                    </tr>
-                    <!-- Barrichello -->
-                    <tr>
-                        <td>7</td>
-                        <td>Rubens barrichello</td>
-                        <td>honda</td>
-                        <td>30</td>
-                    </tr>
-                    <!-- Montoya -->
-                    <tr>
-                        <td>8</td>
-                        <td>Juan Pablo Montoya</td>
-                        <td>Mclaren-Mercedes</td>
-                        <td>26</td>
-                    </tr>
-                    <!-- RSchumacher -->
-                    <tr>
-                        <td>9</td>
-                        <td>Ralf Schumacher</td>
-                        <td>Toyota</td>
-                        <td>20</td>
-                    </tr>
-                    <!-- de la Rosa -->
-                    <tr>
-                        <td>10</td>
-                        <td>Pedro de la Rosa</td>
-                        <td>Mclaren-Mercedes</td>
-                        <td>19</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </body>
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #c00;
+            font-weight: bold;
+        }
+
+        table {
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 6px 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        thead {
+            background-color: #eaeaea;
+            font-weight: bold;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .team {
+            text-align: left;
+            font-weight: bold;
+            color: #c00;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- cabezera -->
+    <header>
+        <h1>Mundial de Constructors F1 2012</h1>
+    </header>
+
+    <!-- index -->
+    <nav>
+        <ul>
+            <li><a href="#">Inici</a></li>
+            <li><a href="#">Pilots</a></li>
+            <li><a href="#">Constructors</a></li>
+            <li><a href="#">Circuits</a></li>
+        </ul>
+    </nav>
+
+    <section>
+
+        <!-- inicio tabla -->
+        <table>
+
+            <!-- cabezera tabla -->
+            <thead>
+
+                <tr>
+
+                    <!-- columnes-->
+                    <th>Pos.</th>
+                    <th>Logo</th>
+                    <th>Equip</th>
+                    <th>Total</th>
+
+                    <th>AU</th>
+                    <th>MY</th>
+                    <th>CN</th>
+                    <th>BH</th>
+                    <th>ES</th>
+                    <th>MC</th>
+                    <th>CA</th>
+                    <th>EU</th>
+                    <th>GB</th>
+                    <th>DE</th>
+                    <th>HU</th>
+                    <th>BE</th>
+                    <th>IT</th>
+                    <th>SG</th>
+                    <th>JP</th>
+                    <th>KR</th>
+                    <th>IN</th>
+                    <th>AB</th>
+                    <th>US</th>
+                    <th>BR</th>
+
+                </tr>
+            </thead>
+            <!-- cuerpo tabla -->
+            <tbody>
+
+                <!-- redbull -->
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <img src="/imatges/logos/rb.jpg" width="40">
+                    </td>
+                    <td class="team">Red Bull Racing</td>
+                    <td>440</td>
+
+                    <!-- Punts per cursa -->
+                    <td>30</td> 
+                    <td>12</td> 
+                    <td>22</td> 
+                    <td>37</td> 
+                    <td>8</td> 
+                    <td>37</td> 
+                    <td>18</td> 
+                    <td>12</td> 
+                    <td>40</td> 
+                    <td>14</td> 
+                    <td>16</td> 
+                    <td>26</td> 
+                    <td>0</td>
+                    <td>25</td>
+                    <td>27</td> 
+                    <td>43</td>
+                    <td>40</td>
+                    <td>15</td>
+                    <td>18</td>
+                    <td> </td>
+
+                </tr>
+
+                <!-- ferrari -->
+                <tr>
+                    <td>2</td>
+                    <td>
+                        <img src="/imatges/logos/fe.png" width="40">
+                    </td>
+                    <td class="team">Ferrari</td>
+                    <td>367</td>
+
+                    <!-- Punts per cursa -->
+                    <td>10</td>
+                    <td>25</td>
+                    <td>2</td>
+                    <td>8</td>
+                    <td>18</td>
+                    <td>23</td>
+                    <td>11</td>
+                    <td>25</td>
+                    <td>30</td>
+                    <td>25</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>27</td>
+                    <td>19</td>
+                    <td>18</td>
+                    <td>27</td>
+                    <td>26</td>
+                    <td>24</td>
+                    <td>27</td>
+                    <td> </td>
+                </tr>
+
+                <!-- Mclaren -->
+                <tr>
+                    <td>3</td>
+                    <td>
+                        <img src="/imatges/logos/mc.jpg" width="40">
+                    </td>
+                    <td class="team">McLaren</td>
+                    <td>353</td>
+
+                    <!-- Punts per cursa -->
+                    <td>40</td>
+                    <td>15</td>
+                    <td>33</td>
+                    <td>4</td>
+                    <td>6</td>
+                    <td>10</td>
+                    <td>25</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>18</td>
+                    <td>33</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td>18</td>
+                    <td>22</td>
+                    <td>1</td>
+                    <td>22</td>
+                    <td>12</td>
+                    <td>35</td>
+                    <td> </td>
+                </tr>
+
+                <!-- lotus  -->
+                <tr>
+                    <td>4</td>
+                    <td>
+                        <img src="/imatges/logos/lot.png" width="40">
+                    </td>
+                    <td class="team">Lotus</td>
+                    <td>302</td>
+
+                    <!-- Punts per cursa -->
+                    <td>6</td>
+                    <td>10</td>
+                    <td>8</td>
+                    <td>33</td>
+                    <td>27</td>
+                    <td>2</td>
+                    <td>22</td>
+                    <td>18</td>
+                    <td>18</td>
+                    <td>15</td>
+                    <td>33</td>
+                    <td>15</td>
+                    <td>10</td>
+                    <td>14</td>
+                    <td>8</td>
+                    <td>16</td>
+                    <td>8</td>
+                    <td>25</td>
+                    <td>14</td>
+                    <td> </td>
+                </tr>
+
+                <!-- Mercedes -->
+                <tr>
+                    <td>5</td>
+                    <td>
+                        <img src="/imatges/logos/mer.png" width="40">
+                    </td>
+                    <td class="team">Mercedes AMG</td>
+                    <td>136</td>
+
+                    <!-- Punts per cursa -->
+                    <td>0</td>
+                    <td>1</td>
+                    <td>25</td>
+                    <td>11</td>
+                    <td>6</td>
+                    <td>18</td>
+                    <td>8</td>
+                    <td>23</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>1</td>
+                    <td>6</td>
+                    <td>14</td>
+                    <td>10</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td> </td>
+                </tr>
+
+                <!-- Sauber -->
+                <tr>
+                    <td>6</td>
+                    <td>
+                        <img src="/imatges/logos/sauber.png" width="40">
+                    </td>
+                    <td class="team">Sauber</td>
+                    <td>124</td>
+
+                    <!-- Punts per cursa -->
+                    <td>12</td>
+                    <td>18</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>10</td>
+                    <td>0</td>
+                    <td>17</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>20</td>
+                    <td>1</td>
+                    <td>15</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>8</td>
+                    <td>0</td>
+                    <td> </td>
+                </tr>
+
+                <!-- Force India -->
+                <tr>
+                    <td>7</td>
+                    <td>
+                        <img src="/imatges/logos/fi.png" width="40">
+                    </td>
+                    <td class="team">Force India</td>
+                    <td>99</td>
+
+                    <!-- Punts per cursa -->
+                    <td>1</td>
+                    <td>8</td>
+                    <td>0</td>
+                    <td>8</td>
+                    <td>1</td>
+                    <td>10</td>
+                    <td>0</td>
+                    <td>16</td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>13</td>
+                    <td>4</td>
+                    <td>12</td>
+                    <td>6</td>
+                    <td>8</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td> </td>
+                </tr>
+
+                <!-- Williams -->
+                <tr>
+                    <td>8</td>
+                    <td>
+                        <img src="/imatges/logos/will.png" width="40">
+                    </td>
+                    <td class="team">Williams</td>
+                    <td>76</td>
+
+                    <!-- Punts per cursa -->
+                    <td>0</td>
+                    <td>8</td>
+                    <td>10</td>
+                    <td>0</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>6</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>14</td>
+                    <td>3</td>
+                    <td> </td>
+                </tr>
+
+                <!-- Toro Rosso -->
+                <tr>
+                    <td>9</td>
+                    <td>
+                        <img src="/imatges/logos/tr.png" width="40">
+                    </td>
+                    <td class="team">Toro Rosso</td>
+                    <td>22</td>
+
+                    <!-- Punts per cursa -->
+                    <td>2</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>6</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>6</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td> </td>
+                </tr>
+
+                <!-- Caterham -->
+                <tr>
+                    <td>10</td>
+                    <td>
+                        <img src="/imatges/logos/caterham.png" width="40">
+                    </td>
+                    <td class="team">Caterham</td>
+                    <td>0</td>
+
+                    <!-- Punts per cursa -->
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td> </td>
+                </tr>
+
+                <!-- HRT -->
+                <tr>
+                    <td>11</td>
+                    <td>
+                        <img src="/imatges/logos/hrt.png" width="40">
+                    </td>
+                    <td class="team">HRT</td>
+                    <td>0</td>
+
+                    <!-- Punts per cursa -->
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td> </td>
+                </tr>
+
+                <!-- marussia -->
+                <tr>
+                    <td>10</td>
+                    <td>
+                        <img src="/imatges/logos/mar.png" width="40">
+                    </td>
+                    <td class="team">marussia</td>
+                    <td>0</td>
+
+                    <!-- Punts per cursa -->
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td> </td>
+                </tr>
+            </tbody>
+            <!-- ===== FI COS TAULA ===== -->
+
+        </table>
+        <!-- *************** FI TAULA *************** -->
+
+    </section>
+
+</body>
 </html>
